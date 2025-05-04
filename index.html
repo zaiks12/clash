@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Clash Mini Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Karakter Seç</h1>
+  <div id="characterSelect">
+    <div class="card" onclick="selectCharacter('Eray', '1.png', 100, 10)">
+      <img src="1.png" alt="Eray"><p>Eray</p>
+    </div>
+    <div class="card" onclick="selectCharacter('Furkan', '3.png', 120, 8)">
+      <img src="3.png" alt="Furkan"><p>Furkan</p>
+    </div>
+    <div class="card" onclick="selectCharacter('Sezar', '4.png', 150, 12)">
+      <img src="4.png" alt="Sezar"><p>Sezar</p>
+    </div>
+    <div class="card" onclick="selectCharacter('Yiğit', '2.png', 110, 11)">
+      <img src="2.png" alt="Yiğit"><p>Yiğit</p>
+    </div>
+  </div>
+
+  <div id="gameArea" style="display:none;">
+    <h2 id="playerName"></h2>
+    <div id="map">
+      <img src="harita.png" alt="Harita" id="mapImg">
+      <img id="characterSprite" src="" alt="Karakter" style="top: 200px; left: 200px;">
+      <img src="kule.png" class="enemyKule" style="top:50px; left:50px;" data-hp="100"><div class="hpText" style="top:30px; left:50px;">HP: 100</div>
+      <img src="kule.png" class="enemyKule" style="top:50px; left:400px;" data-hp="100"><div class="hpText" style="top:30px; left:400px;">HP: 100</div>
+      <img src="kule.png" class="enemyKule" style="top:200px; left:230px;" data-hp="100"><div class="hpText" style="top:180px; left:230px;">HP: 100</div>
+    </div>
+    <div id="stats">
+      <p>Can: <span id="hp">0</span></p>
+      <p>Hasar: <span id="damage">0</span></p>
+      <button id="ultiBtn" onclick="useUlt()">🌀 Mammy Ulti</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
